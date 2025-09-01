@@ -26,7 +26,7 @@ class Perro extends Animales implements Anima {
     }
 
     void comer() {
-        System.out.println(nombre + " el perro come. Tiene " + edad + " años y es de raza " + raza + ".");
+        System.out.println(nombre + " el perro come. Tiene " + edad + " años y es de raza " + raza );
     }
 
     public void dormir(){
@@ -34,19 +34,28 @@ class Perro extends Animales implements Anima {
     } 
     
     public void caminar(){
-        System.out.println("Esta dormido");
+        System.out.println("el perro esta caminando");
     }
 }
 
-class Gato extends Animales {
+class Gato extends Animales implements Anima {
     Gato(String raza, String edad, String nombre) {
         super(raza, edad, nombre);
     }
 
     void comer() {
-        System.out.println(nombre + " el gato come. Tiene " + edad + " años y es de raza " + raza + ".");
+        System.out.println(nombre + "el gato come. Tiene " + edad + " años y es de raza"+raza );
+    }
+
+    public void dormir(){
+        System.out.println(nombre + "el gato está dormido");
+    } 
+
+    public void caminar(){
+        System.out.println(nombre + "el gato camina");
     }
 }
+
 
 public class main {
     public static void main(String[] args) {
@@ -63,7 +72,7 @@ public class main {
         Perro perro = new Perro(razaPerro, edadPerro, nombrePerro);
 
       
-        System.out.println("\nIngrese los datos del gato:");
+        System.out.println("Ingrese los datos del gato:");
         System.out.print("Raza: ");
         String razaGato = scanner.nextLine();
         System.out.print("Edad: ");
