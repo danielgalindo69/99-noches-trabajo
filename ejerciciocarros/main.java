@@ -125,8 +125,6 @@ public class main {
         vehiculo.detener();
         vehiculo.tipoCombustible();
         vehiculo.mostrarInformacion();
-
         scanner.close();
-
     }
 }
